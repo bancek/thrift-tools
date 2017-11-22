@@ -95,7 +95,7 @@ class Map(Type):
     def parse(self, map):
         map_values = {}
 
-        for key, value in map:
+        for key, value in map.items():
             if isinstance(self.key_type, Type):
                 key = self.key_type.parse(key)
             if isinstance(self.value_type, Type):
