@@ -208,7 +208,7 @@ class IdlParser(object):
             resolved_type = self.types_by_name[node_type.value]
 
             if isinstance(resolved_type, TypeDef):
-                return self.resolve_type(resolved_type.node_type)
+                return self.resolve_type(resolved_type.type)
 
             return resolved_type
         if isinstance(node_type, ast.List):
